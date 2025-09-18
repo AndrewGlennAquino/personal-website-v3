@@ -1,12 +1,36 @@
 @import "tailwindcss";
 
+/* Inter font face */
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont.ttf);
+}
+
 html {
+  scrollbar-gutter: stable;
 }
 
 body {
+  font-family: Inter, sans-serif;
+}
+
+/* Light theme */
+.light {
+  background-color: var(--color-alabaster);
+  color: var(--color-eerie);
+}
+
+/* Dark theme */
+.dark {
+  background-color: var(--color-eerie);
+  color: var(--color-alabaster);
 }
 
 @theme {
+  --color-eerie: #191716;
+  --color-alabaster: #e0e2db;
+  --color-tekhelet: #3d348b;
+  --color-xanthous: #e6af2e;
 }
 
 @layer base {
