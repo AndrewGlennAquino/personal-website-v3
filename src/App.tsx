@@ -35,7 +35,7 @@ const App = () => {
             color: "var(--color-eerie)",
           }}
           animate={darkTheme ? "animateBackground" : undefined}
-          transition={{ duration: 0.25, ease: "easeInOut" }}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
           variants={{
             animateBackground: {
               background: "var(--color-eerie)",
