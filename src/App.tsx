@@ -43,19 +43,22 @@ const App = () => {
             },
           }}
         >
-          {/* Persistent header */}
-          <Header />
+          {/* Content container div with 1024px max width */}
+          <div className="max-w-192 mx-auto">
+            {/* Persistent header */}
+            <Header />
 
-          {/* Page routes */}
-          <Routes>
-            <Route path="/" element={<Home />} />
+            {/* Page routes */}
+            <Routes>
+              <Route path="/" element={<Home />} />
 
-            {/* Route for if page does not exist */}
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
+              {/* Route for if page does not exist */}
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
 
-          {/* Persistent footer */}
-          <Footer />
+            {/* Persistent footer */}
+            <Footer />
+          </div>
         </motion.div>
       </DarkThemeContext.Provider>
     </>
