@@ -29,7 +29,7 @@ const App = () => {
       <DarkThemeContext.Provider value={{ darkTheme, setDarkTheme }}>
         {/* Theme change animation div */}
         <motion.div
-          className="w-screen h-screen fixed inset-0 -z-50"
+          className="w-screen h-screen p-6 fixed inset-0 -z-50"
           initial={{
             background: "var(--color-alabaster)",
             color: "var(--color-eerie)",
