@@ -41,7 +41,7 @@ export const Home = () => {
       {/* Home header */}
       <h1 className="text-4xl font-bold">Andrew Aquino</h1>
 
-      {/* TODO: implement about me section */}
+      {/* About me section */}
       <section aria-label="About me" className="mt-4 flex flex-col gap-4">
         <motion.p
           className="text-lg"
@@ -51,7 +51,6 @@ export const Home = () => {
           Hello and nice to meet you!
         </motion.p>
 
-        {/* TODO: implement icon cards with logos */}
         <motion.div
           className="flex flex-col items-center"
           initial={{ opacity: 0, transform: "translateY(8px)" }}
