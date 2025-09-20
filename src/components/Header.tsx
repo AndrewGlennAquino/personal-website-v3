@@ -1,6 +1,7 @@
 // Library imports
 import { useContext } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router";
 
 // Icon imports
 import sun from "../assets/icons/sun.svg";
@@ -8,6 +9,8 @@ import moon from "../assets/icons/moon.svg";
 import linkedinDark from "../assets/icons/linkedin-dark.svg";
 import linkedinLight from "../assets/icons/linkedin-light.svg";
 import githubDark from "../assets/icons/github-dark.svg";
+import blogDark from "../assets/icons/blog-dark.svg";
+import blogLight from "../assets/icons/blog-light.svg";
 import githubLight from "../assets/icons/github-light.svg";
 
 // Context imports
@@ -15,6 +18,7 @@ import { DarkThemeContext } from "../contexts/DarkThemeContext";
 
 // Types for HeaderLinkButton props
 interface HeaderLinkButtonProps {
+  link?: boolean;
   href: string;
   dark: string;
   light: string;
@@ -24,11 +28,27 @@ interface HeaderLinkButtonProps {
 /**
  * HeaderLink component that animates on hover.
  */
-const HeaderLink = ({ href, dark, light, alt }: HeaderLinkButtonProps) => {
+const HeaderLink = ({
+  link,
+  href,
+  dark,
+  light,
+  alt,
+}: HeaderLinkButtonProps) => {
   // Get DarkThemeContext
   const { darkTheme } = useContext(DarkThemeContext);
 
-  return (
+  return link ? (
+    <motion.span initial={{ opacity: 0.5 }} whileHover={{ opacity: 1 }}>
+      <Link to={href}>
+        {darkTheme ? (
+          <img className="w-6 h-6" src={light} alt={alt} />
+        ) : (
+          <img className="w-6 h-6" src={dark} alt={alt} />
+        )}
+      </Link>
+    </motion.span>
+  ) : (
     <motion.a
       href={href}
       target="_blank"
@@ -84,6 +104,15 @@ export const Header = () => {
   return (
     <header className="container mx-auto mb-6">
       <nav className="flex justify-end items-center gap-4">
+        {/* Blog link */}
+        <HeaderLink
+          link
+          href={"/blog"}
+          dark={blogDark}
+          light={blogLight}
+          alt={"Blog link"}
+        />
+
         {/* Github link */}
         <HeaderLink
           href={"https://www.github.com/AndrewGlennAquino"}
