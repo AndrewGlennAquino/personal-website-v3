@@ -5,18 +5,16 @@ import { motion } from "motion/react";
 // Context imports
 import { DarkThemeContext } from "../contexts/DarkThemeContext";
 
-/**
- * Highlighted list item for skills with logo
- */
-export const Highlight = ({
-  src,
-  alt,
-  children,
-}: {
+export interface Highlight {
   src?: string;
   alt: string;
   children: string;
-}) => {
+}
+
+/**
+ * Highlighted list item for skills with logo
+ */
+export const Highlight = ({ src, alt, children }: Highlight) => {
   // Get DarkThemeContext
   const { darkTheme, themeTransitionDuration } = useContext(DarkThemeContext);
 
