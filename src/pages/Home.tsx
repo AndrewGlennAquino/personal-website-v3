@@ -8,6 +8,7 @@ import { Highlight } from "../components/Highlight";
 import typescript from "../assets/images/typescript.png";
 import react from "../assets/images/react.png";
 import tailwind from "../assets/images/tailwind.png";
+import motionLogo from "../assets/images/motion.png";
 import node from "../assets/images/node.png";
 import express from "../assets/images/express.png";
 import postgresql from "../assets/images/postgresql.png";
@@ -70,6 +71,9 @@ export const Home = () => {
             </Highlight>
             <Highlight src={tailwind} alt="Tailwind">
               Tailwind
+            </Highlight>
+            <Highlight src={motionLogo} alt="Motion (formerly Framer Motion)">
+              Motion
             </Highlight>
             <Highlight src={node} alt="Node">
               Node
