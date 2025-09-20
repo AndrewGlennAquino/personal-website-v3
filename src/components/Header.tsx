@@ -128,7 +128,7 @@ export const Header = () => {
           light={linkedinLight}
           alt={"Linkedin link"}
         />
-        
+
         <ChangeThemeButton />
       </nav>
     </header>
