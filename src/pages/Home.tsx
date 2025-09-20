@@ -23,7 +23,7 @@ export const Home = () => {
       opacity: 1,
       transform: "translateY(0)",
       transition: {
-        duration: 0.9,
+        duration: 0.8,
         ease: "easeOut",
       },
     },
