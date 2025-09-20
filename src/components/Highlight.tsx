@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 // Context imports
 import { DarkThemeContext } from "../contexts/DarkThemeContext";
 
-export interface Highlight {
+interface Highlight {
   src?: string;
   alt: string;
   children: string;
