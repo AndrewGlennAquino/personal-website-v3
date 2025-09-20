@@ -1,6 +1,18 @@
 // Library imports
 import { type Variants, motion, stagger } from "motion/react";
 
+// Component imports
+import { Highlight } from "../components/Highlight";
+
+// Image imports
+import typescript from "../assets/images/typescript.png";
+import react from "../assets/images/react.png";
+import tailwind from "../assets/images/tailwind.png";
+import node from "../assets/images/node.png";
+import express from "../assets/images/express.png";
+import postgresql from "../assets/images/postgresql.png";
+import vite from "../assets/images/vite.png";
+
 /**
  * TODO: implement Home page
  */
@@ -38,16 +50,41 @@ export const Home = () => {
         </motion.p>
 
         {/* TODO: implement icon cards with logos */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, transform: "translateY(8px)" }}
           variants={FadeInVariants}
         >
-          My name is Andrew Aquino and I'm a full stack developer who enjoys
-          creating accessible, aesthetically pleasing websites. I specialize in
-          TypeScript, React, Tailwind, Node, Express, PostreSQL, and Vite. I
-          focus on clean design, responsiveness, accessibility, and robust
-          architecture.
-        </motion.p>
+          <p>
+            My name is Andrew Aquino and I'm a full stack developer who enjoys
+            developing aesthetically pleasing and accessible websites. I like to
+            use:
+          </p>
+
+          {/* Skills highlight list */}
+          <ul className="mt-4 inline-flex flex-wrap gap-1">
+            <Highlight src={typescript} alt="TypeScript">
+              TypeScript
+            </Highlight>
+            <Highlight src={react} alt="React">
+              React
+            </Highlight>
+            <Highlight src={tailwind} alt="Tailwind">
+              Tailwind
+            </Highlight>
+            <Highlight src={node} alt="Node">
+              Node
+            </Highlight>
+            <Highlight src={express} alt="Express">
+              Express
+            </Highlight>
+            <Highlight src={postgresql} alt="PostreSQL">
+              PostreSQL
+            </Highlight>
+            <Highlight src={vite} alt="Vite">
+              Vite
+            </Highlight>
+          </ul>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, transform: "translateY(8px)" }}
