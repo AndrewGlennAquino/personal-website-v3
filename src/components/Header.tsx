@@ -9,9 +9,9 @@ import moon from "../assets/icons/moon.svg";
 import linkedinDark from "../assets/icons/linkedin-dark.svg";
 import linkedinLight from "../assets/icons/linkedin-light.svg";
 import githubDark from "../assets/icons/github-dark.svg";
+import githubLight from "../assets/icons/github-light.svg";
 import blogDark from "../assets/icons/blog-dark.svg";
 import blogLight from "../assets/icons/blog-light.svg";
-import githubLight from "../assets/icons/github-light.svg";
 
 // Context imports
 import { DarkThemeContext } from "../contexts/DarkThemeContext";
