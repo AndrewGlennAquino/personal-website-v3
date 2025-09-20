@@ -13,7 +13,7 @@ export const Highlight = ({
   alt,
   children,
 }: {
-  src: string;
+  src?: string;
   alt: string;
   children: string;
 }) => {
@@ -30,7 +30,9 @@ export const Highlight = ({
       transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}
       variants={{ animateBackground: { background: "var(--color-tekhelet)" } }}
     >
-      <img className="w-6 h-auto object-cover" src={src} alt={alt} />
+      {src ? (
+        <img className="w-6 h-auto object-cover" src={src} alt={alt} />
+      ) : undefined}
       {children}
     </motion.li>
   );
