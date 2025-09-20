@@ -34,7 +34,7 @@ export const Home = () => {
       whileInView="animateFadeIn"
       viewport={{ once: true }}
       variants={{
-        animateFadeIn: { transition: { delayChildren: stagger(0.1) } },
+        animateFadeIn: { transition: { delayChildren: stagger(0.2) } },
       }}
     >
       {/* Home header */}
