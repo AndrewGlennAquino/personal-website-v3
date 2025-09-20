@@ -19,6 +19,9 @@ const App = () => {
   // Hold in state if dark theme is toggled, default is false
   const [darkTheme, setDarkTheme] = useState(false);
 
+  // Constant duration for theme transition animations
+  const themeTransitionDuration = 0.2;
+
   // On darkTheme state change, toggle dark class on body
   useEffect(() => {
     document.body.classList.toggle("dark");
@@ -27,7 +30,9 @@ const App = () => {
   return (
     <>
       {/* Provide DarkThemeContext to all components */}
-      <DarkThemeContext.Provider value={{ darkTheme, setDarkTheme }}>
+      <DarkThemeContext.Provider
+        value={{ darkTheme, setDarkTheme, themeTransitionDuration }}
+      >
         {/* Theme change animation div */}
         <motion.div
           className="w-screen h-screen p-6 fixed inset-0 -z-50"
@@ -36,7 +41,7 @@ const App = () => {
             color: "var(--color-eerie)",
           }}
           animate={darkTheme ? "animateBackground" : undefined}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
+          transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}
           variants={{
             animateBackground: {
               background: "var(--color-eerie)",
