@@ -125,6 +125,16 @@ export const Home = () => {
           projects
         </motion.p>
       </section>
+
+      {/* TODO: implement blog section */}
+      <section>
+        <motion.p
+          initial={{ opacity: 0, transform: "translateY(8px)" }}
+          variants={FadeInVariants}
+        >
+          Blog
+        </motion.p>
+      </section>
     </motion.main>
   );
 };
