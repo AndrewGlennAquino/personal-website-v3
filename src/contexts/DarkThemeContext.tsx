@@ -1,10 +1,10 @@
 import { createContext, type SetStateAction } from "react";
 
 // Object types for DarkThemeContext
-interface DarkThemeContextType {
+interface DarkThemeContext {
   darkTheme?: boolean;
   setDarkTheme?: React.Dispatch<SetStateAction<boolean>>;
   themeTransitionDuration?: number;
 }
 
-export const DarkThemeContext = createContext<DarkThemeContextType>({});
+export const DarkThemeContext = createContext<DarkThemeContext>({});
