@@ -1,4 +1,5 @@
 // Library imports
+import { useContext } from "react";
 import { type Variants, motion, stagger } from "motion/react";
 
 // Component imports
@@ -14,10 +15,16 @@ import express from "../assets/images/express.png";
 import postgresql from "../assets/images/postgresql.png";
 import vite from "../assets/images/vite.png";
 
+// Context imports
+import { DarkThemeContext } from "../contexts/DarkThemeContext";
+
 /**
  * TODO: implement Home page
  */
 export const Home = () => {
+  // Get DarkThemeContext
+  const { darkTheme } = useContext(DarkThemeContext);
+
   // Animation variants for fade in animation
   const FadeInVariants: Variants = {
     animateFadeIn: {
@@ -43,13 +50,18 @@ export const Home = () => {
 
       {/* About me section */}
       <section aria-label="About me" className="mt-4 flex flex-col gap-4">
-        <motion.p
-          className="text-lg"
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
+        <motion.span
+          className="text-xl font-bold w-fit"
+          initial={{
+            color: "var(--color-tekhelet)",
+            opacity: 0,
+            transform: "translateY(8px)",
+          }}
+          animate={darkTheme ? { color: "var(--color-xanthous)" } : undefined}
           variants={FadeInVariants}
         >
           Hello and nice to meet you!
-        </motion.p>
+        </motion.span>
 
         <motion.div
           className="flex flex-col items-center"
