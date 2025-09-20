@@ -35,7 +35,7 @@ const App = () => {
       >
         {/* Theme change animation div */}
         <motion.div
-          className="w-screen h-screen p-6 fixed inset-0 -z-50"
+          className="w-screen h-screen p-6 fixed inset-0 -z-50 overflow-y-auto"
           initial={{
             background: "var(--color-alabaster)",
             color: "var(--color-eerie)",

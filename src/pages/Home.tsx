@@ -44,6 +44,7 @@ export const Home = () => {
       {/* TODO: implement about me section */}
       <section aria-label="About me" className="mt-4 flex flex-col gap-4">
         <motion.p
+          className="text-lg"
           initial={{ opacity: 0, transform: "translateY(8px)" }}
           variants={FadeInVariants}
         >
@@ -52,6 +53,7 @@ export const Home = () => {
 
         {/* TODO: implement icon cards with logos */}
         <motion.div
+          className="flex flex-col items-center"
           initial={{ opacity: 0, transform: "translateY(8px)" }}
           variants={FadeInVariants}
         >
@@ -62,7 +64,7 @@ export const Home = () => {
           </p>
 
           {/* Skills highlight list */}
-          <ul className="mt-4 inline-flex flex-wrap gap-1">
+          <ul className="max-w-128 mt-4 inline-flex flex-wrap justify-center gap-1">
             <Highlight src={typescript} alt="TypeScript">
               TypeScript
             </Highlight>
