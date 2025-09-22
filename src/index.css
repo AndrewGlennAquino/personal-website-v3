@@ -12,14 +12,14 @@ html {
 
 body {
   font-family: Inter, sans-serif;
-  background-color: var(--color-alabaster);
-  color: var(--color-eerie);
-}
-
-/* Dark theme */
-.dark {
   background-color: var(--color-eerie);
   color: var(--color-alabaster);
+}
+
+/* Light theme */
+.light {
+  background-color: var(--color-alabaster);
+  color: var(--color-eerie);
 }
 
 @theme {

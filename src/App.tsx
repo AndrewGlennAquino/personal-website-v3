@@ -13,39 +13,39 @@ import { Blog } from "./pages/Blog";
 import { PageNotFound } from "./pages/PageNotFound";
 
 // Context imports
-import { DarkThemeContext } from "./contexts/DarkThemeContext";
+import { LightThemeContext } from "./contexts/LightThemeContext";
 
 const App = () => {
-  // Hold in state if dark theme is toggled, default is false
-  const [darkTheme, setDarkTheme] = useState(false);
+  // Hold in state if light theme is toggled, default is false
+  const [lightTheme, setLightTheme] = useState(false);
 
   // Constant duration for theme transition animations
   const themeTransitionDuration = 0.2;
 
   // On darkTheme state change, toggle dark class on body
   useEffect(() => {
-    document.body.classList.toggle("dark");
-  }, [darkTheme]);
+    document.body.classList.toggle("light");
+  }, [lightTheme]);
 
   return (
     <>
       {/* Provide DarkThemeContext to all components */}
-      <DarkThemeContext.Provider
-        value={{ darkTheme, setDarkTheme, themeTransitionDuration }}
+      <LightThemeContext.Provider
+        value={{ lightTheme, setLightTheme, themeTransitionDuration }}
       >
         {/* Theme change animation div */}
         <motion.div
           className="w-screen h-screen p-6 fixed inset-0 -z-50 overflow-y-auto"
           initial={{
-            background: "var(--color-alabaster)",
-            color: "var(--color-eerie)",
+            background: "var(--color-eerie)",
+            color: "var(--color-alabaster)",
           }}
-          animate={darkTheme ? "animateBackground" : undefined}
+          animate={lightTheme ? "animateBackground" : undefined}
           transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}
           variants={{
             animateBackground: {
-              background: "var(--color-eerie)",
-              color: "var(--color-alabaster)",
+              background: "var(--color-alabaster)",
+              color: "var(--color-eerie)",
             },
           }}
         >
@@ -67,7 +67,7 @@ const App = () => {
             <Footer />
           </div>
         </motion.div>
-      </DarkThemeContext.Provider>
+      </LightThemeContext.Provider>
     </>
   );
 };

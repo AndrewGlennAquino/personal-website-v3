@@ -14,7 +14,7 @@ import blogDark from "../assets/icons/blog-dark.svg";
 import blogLight from "../assets/icons/blog-light.svg";
 
 // Context imports
-import { DarkThemeContext } from "../contexts/DarkThemeContext";
+import { LightThemeContext } from "../contexts/LightThemeContext";
 
 // Types for HeaderLinkButton props
 interface HeaderLinkButtonProps {
@@ -36,15 +36,15 @@ const HeaderLink = ({
   alt,
 }: HeaderLinkButtonProps) => {
   // Get DarkThemeContext
-  const { darkTheme } = useContext(DarkThemeContext);
+  const { lightTheme } = useContext(LightThemeContext);
 
   return link ? (
     <motion.span initial={{ opacity: 0.5 }} whileHover={{ opacity: 1 }}>
       <Link to={href}>
-        {darkTheme ? (
-          <img className="w-6 h-6" src={light} alt={alt} />
-        ) : (
+        {lightTheme ? (
           <img className="w-6 h-6" src={dark} alt={alt} />
+        ) : (
+          <img className="w-6 h-6" src={light} alt={alt} />
         )}
       </Link>
     </motion.span>
@@ -55,10 +55,10 @@ const HeaderLink = ({
       initial={{ opacity: 0.5 }}
       whileHover={{ opacity: 1 }}
     >
-      {darkTheme ? (
-        <img className="w-6 h-6" src={light} alt={alt} />
-      ) : (
+      {lightTheme ? (
         <img className="w-6 h-6" src={dark} alt={alt} />
+      ) : (
+        <img className="w-6 h-6" src={light} alt={alt} />
       )}
     </motion.a>
   );
@@ -69,12 +69,12 @@ const HeaderLink = ({
  */
 const ChangeThemeButton = () => {
   // Get DarkThemeContext
-  const { darkTheme, setDarkTheme } = useContext(DarkThemeContext);
+  const { lightTheme, setLightTheme } = useContext(LightThemeContext);
 
   // Toggle dark theme on click
   const handleDarkThemeToggle = () => {
-    if (setDarkTheme) {
-      setDarkTheme((prev) => !prev);
+    if (setLightTheme) {
+      setLightTheme((prev) => !prev);
     }
   };
 
@@ -87,8 +87,8 @@ const ChangeThemeButton = () => {
     >
       <motion.img
         className="w-full h-full"
-        src={darkTheme ? sun : moon}
-        alt={darkTheme ? "Toggle light theme" : "Toggle dark theme"}
+        src={lightTheme ? moon : sun}
+        alt={lightTheme ? "Toggle dark theme" : "Toggle light theme"}
         initial={{ opacity: 0.5 }}
         whileHover="animateHover"
         variants={{ animateHover: { opacity: 1 } }}

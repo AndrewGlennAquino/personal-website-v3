@@ -16,15 +16,45 @@ import postgresql from "../assets/images/postgresql.png";
 import vite from "../assets/images/vite.png";
 
 // Context imports
-import { DarkThemeContext } from "../contexts/DarkThemeContext";
+import { LightThemeContext } from "../contexts/LightThemeContext";
+
+// Animated section header component
+const SectionHeader = ({ children }: { children: string }) => {
+  // Get LightThemeContext
+  const { lightTheme } = useContext(LightThemeContext);
+
+  // Animation variants for fade in animation
+  const FadeInVariants: Variants = {
+    animateFadeIn: {
+      opacity: 1,
+      transform: "translateY(0)",
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  return (
+    <motion.h2
+      className="text-xl font-bold w-fit"
+      initial={{
+        color: "var(--color-xanthous)",
+        opacity: 0,
+        transform: "translateY(8px)",
+      }}
+      animate={lightTheme ? { color: "var(--color-tekhelet)" } : undefined}
+      variants={FadeInVariants}
+    >
+      {children}
+    </motion.h2>
+  );
+};
 
 /**
  * TODO: implement Home page
  */
 export const Home = () => {
-  // Get DarkThemeContext
-  const { darkTheme } = useContext(DarkThemeContext);
-
   // Animation variants for fade in animation
   const FadeInVariants: Variants = {
     animateFadeIn: {
@@ -50,18 +80,7 @@ export const Home = () => {
 
       {/* About me section */}
       <section aria-label="About me" className="mt-4 flex flex-col gap-4">
-        <motion.span
-          className="text-xl font-bold w-fit"
-          initial={{
-            color: "var(--color-tekhelet)",
-            opacity: 0,
-            transform: "translateY(8px)",
-          }}
-          animate={darkTheme ? { color: "var(--color-xanthous)" } : undefined}
-          variants={FadeInVariants}
-        >
-          Hello and nice to meet you!
-        </motion.span>
+        <SectionHeader>Hello and nice to meet you!</SectionHeader>
 
         <motion.div
           className="flex flex-col items-center"
@@ -118,6 +137,8 @@ export const Home = () => {
       </section>
 
       {/* TODO: implement work experience section */}
+      <section aria-label="Work experience" className="my-4">
+        <SectionHeader>Work experience</SectionHeader>
       <section aria-label="Work experience">
         <motion.p
           initial={{ opacity: 0, transform: "translateY(8px)" }}
@@ -129,22 +150,12 @@ export const Home = () => {
 
       {/* TODO: implement projects section */}
       <section aria-label="Projects">
-        <motion.p
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
-          variants={FadeInVariants}
-        >
-          projects
-        </motion.p>
+        <SectionHeader>Projects</SectionHeader>
       </section>
 
       {/* TODO: implement blog section */}
       <section>
-        <motion.p
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
-          variants={FadeInVariants}
-        >
-          Blog
-        </motion.p>
+        <SectionHeader>Blog</SectionHeader>
       </section>
     </motion.main>
   );

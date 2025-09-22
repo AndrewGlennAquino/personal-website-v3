@@ -3,9 +3,9 @@ import { useContext } from "react";
 import { motion } from "motion/react";
 
 // Context imports
-import { DarkThemeContext } from "../contexts/DarkThemeContext";
+import { LightThemeContext } from "../contexts/LightThemeContext";
 
-interface Highlight {
+export interface HighlightInterface {
   src?: string;
   alt: string;
   children: string;
@@ -14,19 +14,17 @@ interface Highlight {
 /**
  * Highlighted list item for skills with logo
  */
-export const Highlight = ({ src, alt, children }: Highlight) => {
-  // Get DarkThemeContext
-  const { darkTheme, themeTransitionDuration } = useContext(DarkThemeContext);
+export const Highlight = ({ src, alt, children }: HighlightInterface) => {
+  // Get LightThemeContext
+  const { lightTheme, themeTransitionDuration } = useContext(LightThemeContext);
 
   return (
     <motion.li
-      className={`${
-        darkTheme ? `bg-tekhelet` : `bg-xanthous`
-      } font-light px-2 py-0.5 rounded inline-flex items-center gap-1`}
-      initial={{ background: "var(--color-xanthous)" }}
-      animate={darkTheme ? "animateBackground" : undefined}
+      className={`text-sm font-light px-2 py-0.5 rounded inline-flex items-center gap-1`}
+      initial={{ background: "var(--color-tekhelet)" }}
+      animate={lightTheme ? "animateBackground" : undefined}
       transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}
-      variants={{ animateBackground: { background: "var(--color-tekhelet)" } }}
+      variants={{ animateBackground: { background: "var(--color-xanthous)" } }}
     >
       {src ? (
         <img className="w-6 h-auto object-cover" src={src} alt={alt} />
