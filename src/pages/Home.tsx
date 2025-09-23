@@ -17,23 +17,13 @@ import vite from "../assets/images/vite.png";
 
 // Context imports
 import { LightThemeContext } from "../contexts/LightThemeContext";
+import { FadeInContext } from "../contexts/FadeInContext";
 
 // Animated section header component
 const SectionHeader = ({ children }: { children: string }) => {
   // Get LightThemeContext
   const { lightTheme } = useContext(LightThemeContext);
-
-  // Animation variants for fade in animation
-  const FadeInVariants: Variants = {
-    animateFadeIn: {
-      opacity: 1,
-      transform: "translateY(0)",
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
+  const FadeInVariants = useContext(FadeInContext);
 
   return (
     <motion.h2
@@ -56,16 +46,7 @@ const SectionHeader = ({ children }: { children: string }) => {
  */
 export const Home = () => {
   // Animation variants for fade in animation
-  const FadeInVariants: Variants = {
-    animateFadeIn: {
-      opacity: 1,
-      transform: "translateY(0)",
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
+  const FadeInVariants = useContext(FadeInContext);
 
   return (
     <motion.main
