@@ -48,7 +48,7 @@ const App = () => {
           }}
         >
           {/* Content container div with 1024px max width */}
-          <div className="max-w-192 mx-auto">
+          <div className="max-w-256 mx-auto">
             {/* Persistent header */}
             <Header />
 
