@@ -5,6 +5,7 @@ import { motion, stagger } from "motion/react";
 // Component imports
 import { Highlight } from "../components/Highlight";
 import { Experience } from "../components/Experience";
+import { Project } from "../components/Project";
 
 // Image imports
 import typescript from "../assets/images/typescript.png";
@@ -18,6 +19,11 @@ import vite from "../assets/images/vite.png";
 import java from "../assets/images/java.png";
 import spring from "../assets/images/spring.png";
 import maven from "../assets/images/maven.png";
+import chemtekScreenshot from "../assets/images/chemtek-screenshot.png";
+import personalWebsiteV2Screenshot from "../assets/images/personal-website-v2-screenshot.png";
+import brewNBubbleScreenshot from "../assets/images/brew-n-bubble-screenshot.png";
+import fithausScreenshot from "../assets/images/fithaus-screenshot.png";
+import personalWebsiteV1Screenshot from "../assets/images/personal-website-v1-screenshot.png";
 
 // Context imports
 import { LightThemeContext } from "../contexts/LightThemeContext";
@@ -209,9 +215,79 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* TODO: implement projects section */}
-      <section aria-label="Projects">
+      {/* Project section */}
+      <section aria-label="Projects" className="my-12">
         <SectionHeader>Projects</SectionHeader>
+
+        {/* Project container */}
+        <div className="mt-12 flex flex-col gap-8">
+          <Project
+            href="https://www.chemtek.services/"
+            title="ChemTek LLC Website"
+            src={chemtekScreenshot}
+          >
+            End-to-end development of a production-ready web application to
+            showcase ChemTek LLC’s services and drive customer acquisition.
+            Communicate with client to ensure website aesthetics meet
+            specifications and gather feedback on important selling points for
+            SEO. Create a secure admin dashboard that authenticates the admin
+            using Auth0 authentication and IP whitelisting. Build CI/CD
+            pipelines with Netlify and Render, leveraging webhooks to trigger
+            automated frontend rebuilds on backend updates.
+          </Project>
+
+          <Project
+            href="https://andrewglennaquino.github.io/personal-website-v2/"
+            title="Personal Website v2"
+            src={personalWebsiteV2Screenshot}
+          >
+            Develop an improved personal website, focusing on scalability and
+            backend integration. Strengthen proficiency in TypeScript to improve
+            code readability, maintainability, and scalability. Implement a blog
+            management system with PostgreSQL and Express.js to enable dynamic
+            content publishing. Plan deployment architecture via Netlify,
+            Render, and Cloudflare DNS to minimize cost, ensure security, and
+            support scalability.
+          </Project>
+
+          <Project
+            href="https://andrewglennaquino.github.io/brew-n-bubble-website/"
+            title="Brew 'n Bubble Website"
+            src={brewNBubbleScreenshot}
+          >
+            Produced an accessible responsive website for Brew 'n Bubble, a
+            local coffee and bubble tea store. Aimed to match the store’s cozy
+            aesthetic, drawing themes from the store's interior as inspiration
+            for component design. Adhere to Web Content Accessibility Guidelines
+            (WCAG) and design laws of UX/UI for optimized user experience and
+            SEO.
+          </Project>
+
+          <Project
+            href="https://andrewglennaquino.github.io/fit-haus-website/"
+            title="Fithaus Website"
+            src={fithausScreenshot}
+          >
+            Focus on bold fonts, flat edges, and fast animations for a sporty
+            aesthetic, inspired by websites from sport apparel brands.
+            Collaborated closely with the business owner for stylistic decisions
+            that aligned with their Spanish-speaking target audience. Adhere to
+            Web Content Accessibility Guidelines (WCAG) and design laws of UX/UI
+            for optimized user experience and SEO. Deploy the application
+            through GitHub Pages with version control via GitHub for streamlined
+            updates and delivery.
+          </Project>
+
+          <Project
+            href="https://andrewglennaquino.github.io/personal-website/"
+            title="Personal Website v1"
+            src={personalWebsiteV1Screenshot}
+          >
+            Built a fully responsive, single-page website that as my personal
+            portfolio to showcase my skills. Built using React, Vanilla CSS,
+            Motion, and React Three Fiber.
+          </Project>
+        </div>
       </section>
 
       {/* TODO: implement blog section */}
