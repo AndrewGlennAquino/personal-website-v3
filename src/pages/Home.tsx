@@ -1,9 +1,10 @@
 // Library imports
 import { useContext } from "react";
-import { type Variants, motion, stagger } from "motion/react";
+import { motion, stagger } from "motion/react";
 
 // Component imports
 import { Highlight } from "../components/Highlight";
+import { Experience } from "../components/Experience";
 
 // Image imports
 import typescript from "../assets/images/typescript.png";
@@ -14,6 +15,9 @@ import node from "../assets/images/node.png";
 import express from "../assets/images/express.png";
 import postgresql from "../assets/images/postgresql.png";
 import vite from "../assets/images/vite.png";
+import java from "../assets/images/java.png";
+import spring from "../assets/images/spring.png";
+import maven from "../assets/images/maven.png";
 
 // Context imports
 import { LightThemeContext } from "../contexts/LightThemeContext";
@@ -75,7 +79,7 @@ export const Home = () => {
           </p>
 
           {/* Skills highlight list */}
-          <ul className="max-w-128 mt-4 inline-flex flex-wrap justify-center gap-1">
+          <ul className="mt-4 inline-flex flex-wrap gap-1">
             <Highlight src={typescript} alt="TypeScript">
               TypeScript
             </Highlight>
@@ -117,16 +121,92 @@ export const Home = () => {
         </motion.p>
       </section>
 
-      {/* TODO: implement work experience section */}
-      <section aria-label="Work experience" className="my-4">
+      {/* Experience section */}
+      <section aria-label="Work experience" className="my-12">
         <SectionHeader>Work experience</SectionHeader>
-      <section aria-label="Work experience">
-        <motion.p
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
-          variants={FadeInVariants}
-        >
-          Work experience
-        </motion.p>
+
+        {/* Experience container */}
+        <div className="mt-12 flex flex-col gap-8">
+          <Experience
+            start="Jul 2025"
+            end="Present"
+            title="Founding Full Stack Engineer"
+            company="Chemtek LLC"
+            skills={[
+              { src: typescript, alt: "TypeScript", children: "TypeScript" },
+              { src: react, alt: "React", children: "React" },
+              { src: tailwind, alt: "Tailwind", children: "Tailwind" },
+              { src: motionLogo, alt: "Motion", children: "Motion" },
+              { src: node, alt: "Node", children: "Node" },
+              { src: express, alt: "Express", children: "Express" },
+              { src: postgresql, alt: "PostgreSQL", children: "PostgreSQL" },
+              { src: vite, alt: "Vite", children: "Vite" },
+              { alt: "Netlify", children: "Netlify" },
+              { alt: "Render", children: "Render" },
+            ]}
+          >
+            Serve as Founding Full Stack Engineer, independently leading
+            end-to-end development of a full-stack web application using
+            TypeScript, React.js, Tailwind CSS, Node.js, Express.js, PostgreSQL,
+            and AWS Lambda. Develop a MVP with MailChimp API integration via AWS
+            Lambda and Netlify Functions, streamlining and automating customer
+            sign-ups. Design and implement a user authenticated admin dashboard,
+            allowing business owners to independently manage blog posts.
+            Strategize continuous integration and deployment in addition to
+            cloud infrastructure, utilizing Netlify and Render in addition to
+            webhooks to ensure scalability, performance, reliability, and no
+            overhead cost.
+          </Experience>
+
+          <Experience
+            start="Mar 2025"
+            end="Present"
+            title="Freelance Full Stack Developer"
+            company="Self Employed"
+            skills={[
+              { src: typescript, alt: "TypeScript", children: "TypeScript" },
+              { src: react, alt: "React", children: "React" },
+              { src: tailwind, alt: "Tailwind", children: "Tailwind" },
+              { src: motionLogo, alt: "Motion", children: "Motion" },
+              { src: node, alt: "Node", children: "Node" },
+              { src: express, alt: "Express", children: "Express" },
+              { src: postgresql, alt: "PostgreSQL", children: "PostgreSQL" },
+              { src: vite, alt: "Vite", children: "Vite" },
+              { alt: "Netlify", children: "Netlify" },
+              { alt: "Render", children: "Render" },
+            ]}
+          >
+            Design and develop responsive websites for local businesses using
+            TypeScript, React.js, Tailwind CSS, Node.js, and Express.js.
+            Collaborate directly with clients to define requirements and consult
+            on design decisions that best align with their brand and audience.
+            Deliver user-focused designs that comply with accessibility
+            guidelines (WCAG) and follow SEO best practices. Deploy web
+            applications leveraging Cloudflare DNS, Netlify, and Render to
+            deliver secure, low cost, and scalable hosting for clients.
+          </Experience>
+
+          <Experience
+            start="Dec 2024"
+            end="Mar 2025"
+            title="Software Engineer"
+            company="Revature"
+            skills={[
+              { src: java, alt: "Java", children: "Java" },
+              { src: spring, alt: "Spring", children: "Spring" },
+              { src: maven, alt: "Maven", children: "Maven" },
+            ]}
+          >
+            Participated in an immersive backend development training
+            reinforcing Java concepts, Spring Boot, and SQL. Designed,
+            developed, and tested Spring based projects, strengthening
+            understanding of RDBMS industry practices. Passed rigorous technical
+            assessments, validating a deep understanding of Java, Spring, and
+            SQL concepts. Structured training on client-specific tech stacks,
+            demonstrating seamless transition into development teams and
+            production environments.
+          </Experience>
+        </div>
       </section>
 
       {/* TODO: implement projects section */}
