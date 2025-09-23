@@ -57,7 +57,6 @@ export const Experience = ({
     <motion.div
       className="w-full h-full flex flex-col sm:grid sm:grid-cols-4 gap-4"
       aria-label={`${title} work experience`}
-      initial={{ opacity: 0, transform: "translateY(8px)" }}
       variants={FadeInVariants}
     >
       <div className="col-start-1 col-end-2">
@@ -72,7 +71,7 @@ export const Experience = ({
         <h3 className="font-bold">{title}</h3>
 
         <motion.p
-          className="text-xanthous text-sm font-bold"
+          className="text-sm font-bold"
           initial={{ color: "var(--color-xanthous)" }}
           animate={lightTheme ? "animateText" : undefined}
           transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}

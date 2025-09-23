@@ -60,6 +60,7 @@ export const Home = () => {
 
   return (
     <motion.main
+      initial="initial"
       whileInView="animateFadeIn"
       viewport={{ once: true }}
       variants={{
@@ -75,7 +76,6 @@ export const Home = () => {
 
         <motion.div
           className="flex flex-col items-center"
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
           variants={FadeInVariants}
         >
           <p>
@@ -113,10 +113,7 @@ export const Home = () => {
           </ul>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, transform: "translateY(8px)" }}
-          variants={FadeInVariants}
-        >
+        <motion.p variants={FadeInVariants}>
           As the sole Founding Full Stack Engineer at ChemTek, I lead design,
           architecture, and infrastructure decisions, leveraging free and
           cost-effective technologies that allow for scalability as the company
