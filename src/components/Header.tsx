@@ -68,11 +68,11 @@ const HeaderLink = ({
  * Button component that changes the theme
  */
 const ChangeThemeButton = () => {
-  // Get DarkThemeContext
+  // Get LightThemeContext
   const { lightTheme, setLightTheme } = useContext(LightThemeContext);
 
-  // Toggle dark theme on click
-  const handleDarkThemeToggle = () => {
+  // Toggle light theme on click
+  const handleLightThemeToggle = () => {
     if (setLightTheme) {
       setLightTheme((prev) => !prev);
     }
@@ -82,7 +82,7 @@ const ChangeThemeButton = () => {
     <motion.button
       aria-label="Toggle light or dark theme"
       className="cursor-pointer w-6 h-6 flex justify-center items-center"
-      onClick={handleDarkThemeToggle}
+      onClick={handleLightThemeToggle}
       whileHover="animateHover"
     >
       <motion.img
@@ -98,7 +98,7 @@ const ChangeThemeButton = () => {
 };
 
 /**
- * Header component that has navigation links and dark theme toggle
+ * Header component that has navigation links and light theme toggle
  */
 export const Header = () => {
   return (
