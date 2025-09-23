@@ -20,7 +20,7 @@ export const Highlight = ({ src, alt, children }: HighlightInterface) => {
 
   return (
     <motion.li
-      className={`text-sm font-light px-2 py-0.5 rounded inline-flex items-center gap-1`}
+      className={`text-sm font-light px-2 py-0.5 rounded inline-flex items-center gap-2`}
       initial={{ background: "var(--color-tekhelet)" }}
       animate={lightTheme ? "animateBackground" : undefined}
       transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}
