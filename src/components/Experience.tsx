@@ -49,6 +49,7 @@ export const Experience = ({
   return (
     <motion.div
       className="w-full h-full flex flex-col gap-4"
+      aria-label={`${title} work experience`}
       initial={{ opacity: 0, transform: "translateY(8px)" }}
       variants={FadeInVariants}
     >
