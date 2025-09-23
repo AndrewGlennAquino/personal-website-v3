@@ -22,17 +22,15 @@ const App = () => {
   // Constant duration for theme transition animations
   const themeTransitionDuration = 0.2;
 
-  // On darkTheme state change, toggle dark class on body
+  // On lightTheme state change, toggle light class on body
   useEffect(() => {
     document.body.classList.toggle("light");
   }, [lightTheme]);
 
   return (
     <>
-      {/* Provide DarkThemeContext to all components */}
-      <LightThemeContext.Provider
-        value={{ lightTheme, setLightTheme, themeTransitionDuration }}
-      >
+      {/* Provide LightThemeContext to all components */}
+      <LightThemeContext.Provider value={{lightTheme, setLightTheme, themeTransitionDuration}}>
         {/* Theme change animation div */}
         <motion.div
           className="w-screen h-screen p-6 fixed inset-0 -z-50 overflow-y-auto"
