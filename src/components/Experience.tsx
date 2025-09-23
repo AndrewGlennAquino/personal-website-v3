@@ -61,7 +61,7 @@ export const Experience = ({
           variants={TextVariants}
         >{`${start} - ${end}`}</motion.p>
 
-        <p className="font-bold">{title}</p>
+        <h3 className="font-bold">{title}</h3>
 
         <motion.p
           className="text-xanthous text-sm font-bold"
