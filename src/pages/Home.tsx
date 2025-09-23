@@ -80,12 +80,15 @@ export const Home = () => {
         >
           <p>
             My name is Andrew Aquino and I'm a full stack developer who enjoys
-            developing aesthetically pleasing and accessible websites. I like to
-            use:
+            developing aesthetically pleasing and accessible websites. Here is
+            the tech stack I like to use:
           </p>
 
           {/* Skills highlight list */}
-          <ul className="mt-4 inline-flex flex-wrap gap-1">
+          <ul
+            className="mt-4 inline-flex flex-wrap gap-1"
+            aria-label="Technologies I like to use"
+          >
             <Highlight src={typescript} alt="TypeScript">
               TypeScript
             </Highlight>
@@ -134,7 +137,7 @@ export const Home = () => {
             start="Jul 2025"
             end="Present"
             title="Founding Full Stack Engineer"
-            company="Chemtek LLC"
+            company="ChemTek LLC"
             skills={[
               { src: typescript, alt: "TypeScript", children: "TypeScript" },
               { src: react, alt: "React", children: "React" },
@@ -288,7 +291,7 @@ export const Home = () => {
       </section>
 
       {/* TODO: implement blog section */}
-      <section>
+      <section aria-label="Blog" className="my-12">
         <SectionHeader>Blog</SectionHeader>
       </section>
     </motion.main>
