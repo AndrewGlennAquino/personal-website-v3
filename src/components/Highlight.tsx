@@ -31,7 +31,12 @@ export const Highlight = ({ src, alt, children }: HighlightInterface) => {
       variants={{ animateBackground: { background: "var(--color-xanthous)" } }}
     >
       {src ? (
-        <img className="w-6 h-auto object-cover" src={src} alt={alt} />
+        <img
+          className="w-6 h-auto object-cover"
+          src={src}
+          alt={alt}
+          loading="lazy"
+        />
       ) : undefined}
       {children}
     </motion.li>
