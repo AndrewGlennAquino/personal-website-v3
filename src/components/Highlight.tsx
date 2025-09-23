@@ -13,6 +13,10 @@ export interface HighlightInterface {
 
 /**
  * Highlighted list item for skills with logo
+ * 
+ * @param src image source for logo
+ * @param alt alt text for logo
+ * @param children text to display next to logo
  */
 export const Highlight = ({ src, alt, children }: HighlightInterface) => {
   // Get LightThemeContext

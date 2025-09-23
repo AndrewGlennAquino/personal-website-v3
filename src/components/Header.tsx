@@ -27,6 +27,12 @@ interface HeaderLinkButtonProps {
 
 /**
  * HeaderLink component that animates on hover.
+ *
+ * @param link if true, use Link component from react-router, else use anchor tag
+ * @param href URL to link to
+ * @param dark image source for dark theme
+ * @param light image source for light theme
+ * @param alt alt text for image
  */
 const HeaderLink = ({
   link,

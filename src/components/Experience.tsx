@@ -21,6 +21,13 @@ interface Experience {
 
 /**
  * Experience card component for work experience
+ * 
+ * @param start start date of experience
+ * @param end end date of experience
+ * @param title title of experience
+ * @param company company of experience
+ * @param skills skills used in experience
+ * @param children description of experience
  */
 export const Experience = ({
   start,
