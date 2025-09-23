@@ -55,12 +55,12 @@ export const Experience = ({
 
   return (
     <motion.div
-      className="w-full h-full flex flex-col gap-4"
+      className="w-full h-full flex flex-col sm:grid sm:grid-cols-4 gap-4"
       aria-label={`${title} work experience`}
       initial={{ opacity: 0, transform: "translateY(8px)" }}
       variants={FadeInVariants}
     >
-      <div>
+      <div className="col-start-1 col-end-2">
         <motion.p
           className="opacity-50 text-sm"
           initial="initial"
@@ -82,24 +82,26 @@ export const Experience = ({
         </motion.p>
       </div>
 
-      <motion.p
-        className="opacity-75 text-sm"
-        initial="initial"
-        animate={lightTheme ? "animateText" : undefined}
-        transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}
-        variants={TextVariants}
-      >
-        {children}
-      </motion.p>
+      <div className="flex flex-col sm:col-start-2 sm:-col-end-1">
+        <motion.p
+          className="opacity-75 text-sm mb-4"
+          initial="initial"
+          animate={lightTheme ? "animateText" : undefined}
+          transition={{ duration: themeTransitionDuration, ease: "easeInOut" }}
+          variants={TextVariants}
+        >
+          {children}
+        </motion.p>
 
-      {/* For each skill in skills, create a new highlight */}
-      <ul className="flex flex-wrap gap-1">
-        {skills.map((skill, index) => (
-          <Highlight key={index} src={skill.src} alt={skill.alt}>
-            {skill.children}
-          </Highlight>
-        ))}
-      </ul>
+        {/* For each skill in skills, create a new highlight */}
+        <ul className="flex flex-wrap gap-1">
+          {skills.map((skill, index) => (
+            <Highlight key={index} src={skill.src} alt={skill.alt}>
+              {skill.children}
+            </Highlight>
+          ))}
+        </ul>
+      </div>
     </motion.div>
   );
 };
