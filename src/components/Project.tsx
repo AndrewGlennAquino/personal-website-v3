@@ -1,6 +1,6 @@
 // Library imports
 import { useContext } from "react";
-import { motion, type Variants } from "motion/react";
+import { motion } from "motion/react";
 
 // Image imports
 import externalLinkLight from "../assets/icons/external-link-light.svg";
@@ -9,7 +9,6 @@ import externalLinkDark from "../assets/icons/external-link-dark.svg";
 // Context imports
 import { LightThemeContext } from "../contexts/LightThemeContext";
 import { FadeInContext } from "../contexts/FadeInContext";
-import { animate } from "motion";
 
 /**
  * Project component that links to live/demo with screenshot and description.
