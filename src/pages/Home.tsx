@@ -273,9 +273,7 @@ export const Home = () => {
             Collaborated closely with the business owner for stylistic decisions
             that aligned with their Spanish-speaking target audience. Adhere to
             Web Content Accessibility Guidelines (WCAG) and design laws of UX/UI
-            for optimized user experience and SEO. Deploy the application
-            through GitHub Pages with version control via GitHub for streamlined
-            updates and delivery.
+            for optimized user experience and SEO.
           </Project>
 
           <Project
