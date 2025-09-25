@@ -66,6 +66,9 @@ const App = () => {
       <LightThemeContext.Provider
         value={{ lightTheme, setLightTheme, themeTransitionDuration }}
       >
+        {/* For ios safari, change the color of the notch */}
+        <meta name="theme-color" content={lightTheme ? "#e0e2db" : "#191716"} />
+
         {/* Theme change animation div */}
         <motion.div
           className="w-screen h-screen p-6 fixed inset-0 -z-50 overflow-y-auto"
