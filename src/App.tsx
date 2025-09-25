@@ -30,7 +30,11 @@ const App = () => {
 
   // On lightTheme state change, toggle light class on body
   useEffect(() => {
-    document.body.classList.toggle("light");
+    if (lightTheme) {
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+    }
   }, [lightTheme]);
 
   /** On scroll below header, set scrolledDown to true.
