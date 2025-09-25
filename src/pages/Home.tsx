@@ -25,6 +25,12 @@ import brewNBubbleScreenshot from "../assets/images/brew-n-bubble-screenshot.png
 import fithausScreenshot from "../assets/images/fithaus-screenshot.png";
 import personalWebsiteV1Screenshot from "../assets/images/personal-website-v1-screenshot.png";
 
+// Video imports
+import chemtekVideo from "../assets/videos/chemtek-video.mp4";
+import brewNBubbleVideo from "../assets/videos/brew-n-bubble-video.mp4";
+import fithausVideo from "../assets/videos/fit-haus-video.mp4";
+import personalWebsiteV1Video from "../assets/videos/personal-website-video.mp4";
+
 // Context imports
 import { LightThemeContext } from "../contexts/LightThemeContext";
 import { FadeInContext } from "../contexts/FadeInContext";
@@ -222,18 +228,19 @@ export const Home = () => {
         {/* Project container */}
         <div className="mt-12 flex flex-col gap-8">
           <Project
+            video
             href="https://www.chemtek.services/"
             title="ChemTek LLC Website"
-            src={chemtekScreenshot}
+            src={chemtekVideo}
+            poster={chemtekScreenshot}
           >
-            End-to-end development of a production-ready web application to
-            showcase ChemTek LLC’s services and drive customer acquisition.
-            Communicate with client to ensure website aesthetics meet
-            specifications and gather feedback on important selling points for
-            SEO. Create a secure admin dashboard that authenticates the admin
-            using Auth0 authentication and IP whitelisting. Build CI/CD
-            pipelines with Netlify and Render, leveraging webhooks to trigger
-            automated frontend rebuilds on backend updates.
+            End-to-end development to showcase ChemTek LLC’s services and drive
+            customer acquisition. Ensure website aesthetics meet specifications
+            and gather feedback on important selling points for SEO. Create a
+            secure admin dashboard that authenticates the admin using Auth0
+            authentication. Build CI/CD pipelines with Netlify and Render,
+            leveraging webhooks to trigger automated frontend rebuilds on
+            backend updates.
           </Project>
 
           <Project
@@ -251,9 +258,11 @@ export const Home = () => {
           </Project>
 
           <Project
+            video
             href="https://andrewglennaquino.github.io/brew-n-bubble-website/"
             title="Brew 'n Bubble Website"
-            src={brewNBubbleScreenshot}
+            src={brewNBubbleVideo}
+            poster={brewNBubbleScreenshot}
           >
             Produced an accessible responsive website for Brew 'n Bubble, a
             local coffee and bubble tea store. Aimed to match the store’s cozy
@@ -264,9 +273,11 @@ export const Home = () => {
           </Project>
 
           <Project
+            video
             href="https://andrewglennaquino.github.io/fit-haus-website/"
             title="Fithaus Website"
-            src={fithausScreenshot}
+            src={fithausVideo}
+            poster={fithausScreenshot}
           >
             Focus on bold fonts, flat edges, and fast animations for a sporty
             aesthetic, inspired by websites from sport apparel brands.
@@ -277,9 +288,11 @@ export const Home = () => {
           </Project>
 
           <Project
+            video
             href="https://andrewglennaquino.github.io/personal-website/"
             title="Personal Website v1"
-            src={personalWebsiteV1Screenshot}
+            src={personalWebsiteV1Video}
+            poster={personalWebsiteV1Screenshot}
           >
             Built a fully responsive, single-page website that as my personal
             portfolio to showcase my skills. Built using React, Vanilla CSS,

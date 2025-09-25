@@ -19,11 +19,15 @@ import { FadeInContext } from "../contexts/FadeInContext";
  * @param children description of project
  */
 export const Project = ({
+  video,
+  poster,
   href,
   title,
   src,
   children,
 }: {
+  video?: boolean;
+  poster?: string;
   href: string;
   title: string;
   src: string;
@@ -81,13 +85,25 @@ export const Project = ({
           </motion.p>
         </div>
 
-        {/* Screenshot */}
-        <img
-          className="aspect-video w-full h-auto rounded row-start-1 col-start-1 col-end-2 object-cover"
-          src={src}
-          alt={title}
-          loading="lazy"
-        />
+        {/* Screenshot or video */}
+        {video ? (
+          <video
+            className="aspect-video w-full h-auto rounded row-start-1 col-start-1 col-end-2 object-cover"
+            src={src}
+            poster={poster}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        ) : (
+          <img
+            className="aspect-video w-full h-auto rounded row-start-1 col-start-1 col-end-2 object-cover"
+            src={src}
+            alt={title}
+            loading="lazy"
+          />
+        )}
       </motion.div>
     </motion.a>
   );
