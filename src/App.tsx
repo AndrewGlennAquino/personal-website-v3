@@ -120,6 +120,7 @@ const App = () => {
                   : { display: "none" }
               }
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.35 }}
             >
               {/* Background glow */}
               <div
