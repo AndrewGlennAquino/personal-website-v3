@@ -14,14 +14,12 @@ body {
   font-family: Inter, sans-serif;
   background-color: var(--color-eerie);
   color: var(--color-alabaster);
-  scrollbar-color: var(--color-xanthous) var(--color-eerie);
 }
 
 /* Light theme */
 .light {
   background-color: var(--color-alabaster);
   color: var(--color-eerie);
-  scrollbar-color: var(--color-tekhelet) var(--color-alabaster);
 }
 
 @theme {

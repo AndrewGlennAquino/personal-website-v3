@@ -23,11 +23,24 @@ const App = () => {
   // Constant duration for theme transition animations
   const themeTransitionDuration = 0.2;
 
-  // On lightTheme state change, toggle light class on body
+  /** On lightTheme state change, toggle light class on body
+   *  and change scrollbar color
+   */
   useEffect(() => {
+    const html = document.querySelector("html");
+
     if (lightTheme) {
+      if (html) {
+        html.style.scrollbarColor =
+          "var(--color-tekhelet) var(--color-alabaster)";
+      }
+
       document.body.classList.add("light");
     } else {
+      if (html) {
+        html.style.scrollbarColor = "var(--color-xanthous) var(--color-eerie)";
+      }
+
       document.body.classList.remove("light");
     }
   }, [lightTheme]);
