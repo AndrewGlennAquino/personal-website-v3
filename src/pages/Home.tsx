@@ -1,6 +1,7 @@
 // Library imports
 import { useContext } from "react";
 import { motion, stagger } from "motion/react";
+import { Link } from "react-router";
 
 // Component imports
 import { Highlight } from "../components/Highlight";
@@ -301,9 +302,35 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* TODO: implement blog section */}
+      {/* Blog section */}
       <section aria-label="Blog" className="my-12">
-        <SectionHeader>Blog</SectionHeader>
+        <SectionHeader>Writing</SectionHeader>
+
+        {/* Blog container */}
+        <motion.div className="mt-8" variants={FadeInVariants}>
+          <p className="text-sm opacity-75 mb-2">
+            I'm by no means an author or poet, nor am I profound or enlightened
+            in anyway 😭, but hey, fake it 'till you make it. If you would like
+            to take a read into my spaghetti code of poems, please feel free!
+          </p>
+
+          <Link to="/blog">
+            <motion.div
+              className="w-fit"
+              initial={{ opacity: 0.5 }}
+              whileHover="animateHover"
+              variants={{ animateHover: { opacity: 1 } }}
+            >
+              Link to writing
+              <motion.div
+                className="inline-block ml-1"
+                variants={{ animateHover: { transform: "translateX(8px)" } }}
+              >
+                →
+              </motion.div>
+            </motion.div>
+          </Link>
+        </motion.div>
       </section>
     </motion.main>
   );
