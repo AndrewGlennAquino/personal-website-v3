@@ -7,6 +7,7 @@ import { Link } from "react-router";
 import { Highlight } from "../components/Highlight";
 import { Experience } from "../components/Experience";
 import { Project } from "../components/Project";
+import { Footer } from "../components/Footer";
 
 // Image imports
 import typescript from "../assets/images/typescript.png";
@@ -332,6 +333,9 @@ export const Home = () => {
           </Link>
         </motion.div>
       </section>
+
+      {/* Persistent footer */}
+      <Footer />
     </motion.main>
   );
 };

@@ -78,9 +78,6 @@ const App = () => {
             {/* Route for if page does not exist */}
             <Route path="*" element={<PageNotFound />} />
           </Routes>
-
-          {/* Persistent footer */}
-          <Footer />
         </div>
 
         {/* Return to top of page button */}
