@@ -70,6 +70,7 @@ const App = () => {
           <Footer />
         </div>
 
+        {/* Return to top of page button */}
         <ReturnToTopButton />
       </LightThemeContext.Provider>
     </>
