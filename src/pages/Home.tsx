@@ -328,7 +328,7 @@ export const Home = () => {
                 Link to writing
                 <motion.div
                   className="inline-block ml-1"
-                  variants={{ animateHover: { transform: "translateX(8px)" } }}
+                  variants={{ animateHover: { transform: "translateX(4px)" } }}
                 >
                   →
                 </motion.div>
