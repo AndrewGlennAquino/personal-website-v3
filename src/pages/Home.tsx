@@ -70,8 +70,7 @@ export const Home = () => {
     <>
       <motion.main
         initial="initial"
-        whileInView="animateFadeIn"
-        viewport={{ once: true }}
+        animate="animateFadeIn"
         variants={{
           animateFadeIn: { transition: { delayChildren: stagger(0.2) } },
         }}
