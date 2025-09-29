@@ -12,7 +12,7 @@ import linkedinLight from "../assets/icons/linkedin-light.svg";
 import { LightThemeContext } from "../contexts/LightThemeContext";
 
 /**
- * TODO: implement SocialMediaButton
+ * Animated Social media button
  */
 const SocialMediaButton = ({
   href,
@@ -48,7 +48,7 @@ const SocialMediaButton = ({
 };
 
 /**
- * TODO: implement Footer element
+ * Footer element with contact information
  */
 export const Footer = () => {
   // Hold in state if email button is clicked
