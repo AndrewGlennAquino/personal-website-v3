@@ -88,6 +88,7 @@ export const Project = ({
         {/* Screenshot or video */}
         {video ? (
           <video
+            aria-label={title}
             className="aspect-video w-full h-auto rounded row-start-1 col-start-1 col-end-2 object-cover"
             src={src}
             poster={poster}
