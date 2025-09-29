@@ -75,7 +75,7 @@ export const Footer = () => {
       </motion.h1>
 
       {/* Footer content container */}
-      <div className="mt-8 flex flex-col sm:grid sm:grid-cols-2 gap-8">
+      <div className="mt-8 flex flex-col sm:grid sm:grid-cols-2 gap-8 sm:gap-0">
         {/* Copy email button */}
         <div>
           <p className="mb-4">
@@ -103,28 +103,30 @@ export const Footer = () => {
         </div>
 
         {/* Selectable contact information and socials */}
-        <div className="content-center">
-          {/* Contact information container */}
-          <div className="opacity-50 flex flex-col gap-1">
-            <a>andrewglenn.aquino@gmail.com</a>
-            <a>(224) 828-1841</a>
-          </div>
+        <div className="sm:justify-items-center sm:content-center">
+          <div>
+            {/* Contact information container */}
+            <div className="opacity-50 flex flex-col gap-1">
+              <a>andrewglenn.aquino@gmail.com</a>
+              <a>(224) 828-1841</a>
+            </div>
 
-          {/* Socials container */}
-          <div className="mt-2 flex gap-2">
-            <SocialMediaButton
-              href="https://www.github.com/AndrewGlennAquino"
-              dark={githubDark}
-              light={githubLight}
-              alt="Github link"
-            />
+            {/* Socials container */}
+            <div className="mt-2 flex gap-2">
+              <SocialMediaButton
+                href="https://www.github.com/AndrewGlennAquino"
+                dark={githubDark}
+                light={githubLight}
+                alt="Github link"
+              />
 
-            <SocialMediaButton
-              href="https://www.linkedin.com/in/andrew-glenn-aquino"
-              dark={linkedinDark}
-              light={linkedinLight}
-              alt="LinkedIn link"
-            />
+              <SocialMediaButton
+                href="https://www.linkedin.com/in/andrew-glenn-aquino"
+                dark={linkedinDark}
+                light={linkedinLight}
+                alt="LinkedIn link"
+              />
+            </div>
           </div>
         </div>
       </div>
