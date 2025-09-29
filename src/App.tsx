@@ -5,7 +5,6 @@ import { Routes, Route } from "react-router";
 
 // Component imports
 import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
 import { ReturnToTopButton } from "./components/ReturnToTopButton";
 
 // Page imports
