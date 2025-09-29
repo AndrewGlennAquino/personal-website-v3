@@ -29,7 +29,7 @@ const SocialMediaButton = ({
   const { lightTheme } = useContext(LightThemeContext);
 
   return (
-    <a href={href}>
+    <a href={href} target="_blank">
       <motion.div
         className={`${
           lightTheme ? `bg-xanthous` : `bg-tekhelet`
@@ -89,7 +89,7 @@ export const Footer = () => {
             <motion.div
               className={`${
                 lightTheme ? `bg-xanthous` : `bg-tekhelet`
-              } text-center font-bold w-32 px-4 py-2 rounded relative`}
+              } text-center font-bold w-36 px-4 py-2 rounded relative`}
               onClick={() => {
                 setClicked(true);
                 navigator.clipboard.writeText("andrewglenn.aquino@gmail.com");
@@ -113,17 +113,17 @@ export const Footer = () => {
           {/* Socials container */}
           <div className="mt-2 flex gap-2">
             <SocialMediaButton
-              href="#"
+              href="https://www.github.com/AndrewGlennAquino"
               dark={githubDark}
               light={githubLight}
-              alt="Github"
+              alt="Github link"
             />
 
             <SocialMediaButton
-              href="#"
+              href="https://www.linkedin.com/in/andrew-glenn-aquino"
               dark={linkedinDark}
               light={linkedinLight}
-              alt="Github"
+              alt="LinkedIn link"
             />
           </div>
         </div>
