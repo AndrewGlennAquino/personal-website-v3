@@ -41,6 +41,8 @@ import { FadeInContext } from "../contexts/FadeInContext";
 const SectionHeader = ({ children }: { children: string }) => {
   // Get LightThemeContext
   const { lightTheme } = useContext(LightThemeContext);
+
+  // Get FadeInContext
   const FadeInVariants = useContext(FadeInContext);
 
   return (
