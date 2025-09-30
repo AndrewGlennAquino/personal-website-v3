@@ -61,7 +61,7 @@ const SectionHeader = ({ children }: { children: string }) => {
 };
 
 /**
- * TODO: implement Home page
+ * Home page component
  */
 export const Home = () => {
   // Animation variants for fade in animation

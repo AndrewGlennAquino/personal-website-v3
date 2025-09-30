@@ -69,7 +69,7 @@ const App = () => {
 
           {/* Page routes */}
           <Routes>
-            <Route path="/personal-website-v3" element={<Home />} />
+            <Route path="/" element={<Home />} />
 
             {/* Route for if page does not exist */}
             <Route path="*" element={<PageNotFound />} />
