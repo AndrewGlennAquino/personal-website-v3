@@ -10,8 +10,6 @@ import linkedinDark from "../assets/icons/linkedin-dark.svg";
 import linkedinLight from "../assets/icons/linkedin-light.svg";
 import githubDark from "../assets/icons/github-dark.svg";
 import githubLight from "../assets/icons/github-light.svg";
-import blogDark from "../assets/icons/blog-dark.svg";
-import blogLight from "../assets/icons/blog-light.svg";
 
 // Context imports
 import { LightThemeContext } from "../contexts/LightThemeContext";
@@ -110,15 +108,6 @@ export const Header = () => {
   return (
     <header className="container mx-auto mb-6">
       <nav className="flex justify-end items-center gap-4">
-        {/* Blog link */}
-        <HeaderLink
-          link
-          href={"/blog"}
-          dark={blogDark}
-          light={blogLight}
-          alt={"Blog link"}
-        />
-
         {/* Github link */}
         <HeaderLink
           href={"https://www.github.com/AndrewGlennAquino"}
