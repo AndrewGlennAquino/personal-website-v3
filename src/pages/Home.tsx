@@ -12,6 +12,8 @@ import { Footer } from "../components/Footer";
 // Image imports
 import typescript from "../assets/images/typescript.png";
 import javascript from "../assets/images/javascript.png";
+import html from "../assets/images/html.png";
+import css from "../assets/images/css.png";
 import react from "../assets/images/react.png";
 import tailwind from "../assets/images/tailwind.png";
 import motionLogo from "../assets/images/motion.png";
@@ -155,6 +157,8 @@ export const Home = () => {
               skills={[
                 { src: typescript, alt: "TypeScript", children: "TypeScript" },
                 { src: javascript, alt: "JavaScript", children: "JavaScript" },
+                { src: html, alt: "HTML", children: "HTML" },
+                { src: css, alt: "Vanilla CSS", children: "Vanilla CSS" },
                 { src: react, alt: "React", children: "React" },
                 { src: tailwind, alt: "Tailwind", children: "Tailwind" },
                 { src: motionLogo, alt: "Motion", children: "Motion" },
@@ -176,7 +180,7 @@ export const Home = () => {
               start="Mar 2025"
               end="Present"
               title="Freelance Full Stack Developer"
-              company="Self Employed"
+              company="Freelance"
               skills={[
                 { src: typescript, alt: "TypeScript", children: "TypeScript" },
                 { src: react, alt: "React", children: "React" },
@@ -215,8 +219,8 @@ export const Home = () => {
                 { src: express, alt: "Express", children: "Express" },
                 { src: postgresql, alt: "PostgreSQL", children: "PostgreSQL" },
                 { src: vite, alt: "Vite", children: "Vite" },
-                { alt: "Netlify", children: "Netlify" },
-                { alt: "Render", children: "Render" },
+                { children: "Netlify" },
+                { children: "Render" },
               ]}
             >
               Serve as Founding Full Stack Engineer, independently leading
