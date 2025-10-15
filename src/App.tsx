@@ -71,7 +71,7 @@ const App = () => {
           {/* Page routes */}
           <Routes>
             {/* TODO: remove path for Home */}
-            <Route path="/personal-website-v3" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
 
             {/* Route for if page does not exist */}
