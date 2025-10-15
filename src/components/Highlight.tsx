@@ -7,7 +7,7 @@ import { LightThemeContext } from "../contexts/LightThemeContext";
 
 export interface HighlightInterface {
   src?: string;
-  alt: string;
+  alt?: string;
   children: string;
 }
 
