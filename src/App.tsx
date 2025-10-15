@@ -9,6 +9,7 @@ import { ReturnToTopButton } from "./components/ReturnToTopButton";
 
 // Page imports
 import { Home } from "./pages/Home";
+import { Blog } from "./pages/Blog";
 import { PageNotFound } from "./pages/PageNotFound";
 
 // Context imports
@@ -69,7 +70,9 @@ const App = () => {
 
           {/* Page routes */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* TODO: remove path for Home */}
+            <Route path="/personal-website-v3" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
 
             {/* Route for if page does not exist */}
             <Route path="*" element={<PageNotFound />} />
