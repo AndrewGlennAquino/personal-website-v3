@@ -11,6 +11,7 @@ import { Footer } from "../components/Footer";
 
 // Image imports
 import typescript from "../assets/images/typescript.png";
+import javascript from "../assets/images/javascript.png";
 import react from "../assets/images/react.png";
 import tailwind from "../assets/images/tailwind.png";
 import motionLogo from "../assets/images/motion.png";
@@ -21,6 +22,8 @@ import vite from "../assets/images/vite.png";
 import java from "../assets/images/java.png";
 import spring from "../assets/images/spring.png";
 import maven from "../assets/images/maven.png";
+import wordpress from "../assets/images/wordpress.png";
+import mjml from "../assets/images/mjml.png";
 import chemtekScreenshot from "../assets/images/chemtek-screenshot.png";
 import personalWebsiteV2Screenshot from "../assets/images/personal-website-v2-screenshot.png";
 import brewNBubbleScreenshot from "../assets/images/brew-n-bubble-screenshot.png";
@@ -128,12 +131,12 @@ export const Home = () => {
           </motion.div>
 
           <motion.p variants={FadeInVariants}>
-            As the sole Founding Full Stack Engineer at ChemTek, I lead design,
-            architecture, and infrastructure decisions, leveraging free and
-            cost-effective technologies that allow for scalability as the
-            company grows. As a freelance full stack developer, I collaborate
-            with local businesses and entrepreneurs to deliver modern,
-            responsive, and SEO optimized websites for free as community
+            As Web Developer at Divine Design & Marketing, I develop landing
+            pages, MVPs, multi-page web applications, and stylized, responsive
+            email blasts for local and multinational clients using preferred
+            client tech stack. As a freelance full stack developer, I
+            collaborate with local businesses and entrepreneurs to deliver
+            modern, responsive, and SEO optimized websites for free as community
             service, helping small businesses thrive in the digital space.
           </motion.p>
         </section>
@@ -145,8 +148,62 @@ export const Home = () => {
           {/* Experience container */}
           <div className="mt-12 flex flex-col gap-8">
             <Experience
-              start="Jul 2025"
+              start="October 2025"
               end="Present"
+              title="Web Developer"
+              company="Divine Design & Marketing"
+              skills={[
+                { src: typescript, alt: "TypeScript", children: "TypeScript" },
+                { src: javascript, alt: "JavaScript", children: "JavaScript" },
+                { src: react, alt: "React", children: "React" },
+                { src: tailwind, alt: "Tailwind", children: "Tailwind" },
+                { src: motionLogo, alt: "Motion", children: "Motion" },
+                { src: mjml, alt: "MJML", children: "MJML" },
+                { src: wordpress, alt: "WordPress", children: "WordPress" },
+              ]}
+            >
+              Develop landing pages, MVPs, multi-page web applications, and
+              stylized, responsive email blasts for local and multinational
+              clients. Utilize TypeScript, JavaScript, HTML, Vanilla CSS, React,
+              Tailwind CSS, and WordPress to implement modern web applications
+              dependent on client tech stack. Leverage A/B testing to implement
+              accessible, stylized, and responsive email blasts for clients
+              using MJML. Collaborate with design and videography teams to plan
+              sprints in order to efficiently fulfill client requests.
+            </Experience>
+
+            <Experience
+              start="Mar 2025"
+              end="Present"
+              title="Freelance Full Stack Developer"
+              company="Self Employed"
+              skills={[
+                { src: typescript, alt: "TypeScript", children: "TypeScript" },
+                { src: react, alt: "React", children: "React" },
+                { src: tailwind, alt: "Tailwind", children: "Tailwind" },
+                { src: motionLogo, alt: "Motion", children: "Motion" },
+                { src: node, alt: "Node", children: "Node" },
+                { src: express, alt: "Express", children: "Express" },
+                { src: postgresql, alt: "PostgreSQL", children: "PostgreSQL" },
+                { src: vite, alt: "Vite", children: "Vite" },
+                { children: "Netlify" },
+                { children: "Render" },
+              ]}
+            >
+              Design and develop responsive websites for local businesses using
+              TypeScript, React.js, Tailwind CSS, Node.js, and Express.js.
+              Collaborate directly with clients to define requirements and
+              consult on design decisions that best align with their brand and
+              audience. Deliver user-focused designs that comply with
+              accessibility guidelines (WCAG) and follow SEO best practices.
+              Deploy web applications leveraging Cloudflare DNS, Netlify, and
+              Render to deliver secure, low cost, and scalable hosting for
+              clients.
+            </Experience>
+
+            <Experience
+              start="Jul 2025"
+              end="October 2025"
               title="Founding Full Stack Engineer"
               company="ChemTek LLC"
               skills={[
@@ -173,35 +230,6 @@ export const Home = () => {
               and deployment in addition to cloud infrastructure, utilizing
               Netlify and Render in addition to webhooks to ensure scalability,
               performance, reliability, and no overhead cost.
-            </Experience>
-
-            <Experience
-              start="Mar 2025"
-              end="Present"
-              title="Freelance Full Stack Developer"
-              company="Self Employed"
-              skills={[
-                { src: typescript, alt: "TypeScript", children: "TypeScript" },
-                { src: react, alt: "React", children: "React" },
-                { src: tailwind, alt: "Tailwind", children: "Tailwind" },
-                { src: motionLogo, alt: "Motion", children: "Motion" },
-                { src: node, alt: "Node", children: "Node" },
-                { src: express, alt: "Express", children: "Express" },
-                { src: postgresql, alt: "PostgreSQL", children: "PostgreSQL" },
-                { src: vite, alt: "Vite", children: "Vite" },
-                { alt: "Netlify", children: "Netlify" },
-                { alt: "Render", children: "Render" },
-              ]}
-            >
-              Design and develop responsive websites for local businesses using
-              TypeScript, React.js, Tailwind CSS, Node.js, and Express.js.
-              Collaborate directly with clients to define requirements and
-              consult on design decisions that best align with their brand and
-              audience. Deliver user-focused designs that comply with
-              accessibility guidelines (WCAG) and follow SEO best practices.
-              Deploy web applications leveraging Cloudflare DNS, Netlify, and
-              Render to deliver secure, low cost, and scalable hosting for
-              clients.
             </Experience>
 
             <Experience
