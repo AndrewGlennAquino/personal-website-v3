@@ -149,7 +149,7 @@ export const Home = () => {
           {/* Experience container */}
           <div className="mt-12 flex flex-col gap-8">
             <Experience
-              start="October 2025"
+              start="Oct 2025"
               end="Present"
               title="Web Developer"
               company="Divine Design & Marketing"
@@ -206,7 +206,7 @@ export const Home = () => {
 
             <Experience
               start="Jul 2025"
-              end="October 2025"
+              end="Oct 2025"
               title="Founding Full Stack Engineer"
               company="ChemTek LLC"
               skills={[
