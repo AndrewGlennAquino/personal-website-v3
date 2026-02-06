@@ -134,11 +134,11 @@ export const Home = () => {
           <motion.p variants={FadeInVariants}>
             As Web Developer at Divine Design & Marketing, I develop landing
             pages, MVPs, multi-page web applications, and stylized, responsive
-            email blasts for local and multinational clients using preferred
-            client tech stack. As a freelance full stack developer, I
-            collaborate with local businesses and entrepreneurs to deliver
-            modern, responsive, and SEO optimized websites for free as community
-            service, helping small businesses thrive in the digital space.
+            email blasts for LG Electronics B2B marketing and Zebra Technologies
+            partners. As a freelance full stack developer, I collaborate with
+            local businesses and entrepreneurs to deliver modern, responsive,
+            and SEO optimized websites for free as community service, helping
+            small businesses thrive in the digital space.
           </motion.p>
         </section>
 
@@ -166,13 +166,14 @@ export const Home = () => {
               ]}
             >
               Develop landing pages, MVPs, multi-page web applications, and
-              stylized, responsive email blasts for local and multinational
-              clients. Utilize TypeScript, JavaScript, HTML, Vanilla CSS, React,
-              Tailwind CSS, and WordPress to implement modern web applications
-              dependent on client tech stack. Leverage A/B testing to implement
-              accessible, stylized, and responsive email blasts for clients
-              using MJML. Collaborate with design and videography teams to plan
-              sprints in order to efficiently fulfill client requests.
+              stylized, responsive email blasts for LG Electronics B2B marketing
+              and Zebra Technologies partners. Utilize TypeScript, JavaScript,
+              HTML, Vanilla CSS, React, Tailwind, and WordPress to implement
+              modern web applications dependent on client tech stack. Leverage
+              A/B testing to implement accessible, stylized, and responsive
+              email blasts for clients using MJML. Collaborate with design and
+              videography teams to plan sprints in order to efficiently fulfill
+              client requests.
             </Experience>
 
             <Experience
@@ -194,7 +195,7 @@ export const Home = () => {
               ]}
             >
               Design and develop responsive websites for local businesses using
-              TypeScript, React.js, Tailwind CSS, Node.js, and Express.js.
+              TypeScript, React, Tailwind, Node.js, and Express.
               Collaborate directly with clients to define requirements and
               consult on design decisions that best align with their brand and
               audience. Deliver user-focused designs that comply with
@@ -207,7 +208,7 @@ export const Home = () => {
             <Experience
               start="Jul 2025"
               end="Oct 2025"
-              title="Founding Full Stack Engineer"
+              title="Full Stack Developer"
               company="ChemTek LLC"
               skills={[
                 { src: typescript, alt: "TypeScript", children: "TypeScript" },
@@ -222,9 +223,9 @@ export const Home = () => {
                 { children: "Render" },
               ]}
             >
-              Serve as Founding Full Stack Engineer, independently leading
+              Serve as founding Full Stack Developer, independently leading
               end-to-end development of a full-stack web application using
-              TypeScript, React.js, Tailwind CSS, Node.js, Express.js,
+              TypeScript, React, Tailwind, Node.js, Express,
               PostgreSQL, and AWS Lambda. Develop a MVP with MailChimp API
               integration via AWS Lambda and Netlify Functions, streamlining and
               automating customer sign-ups. Design and implement a user
@@ -288,7 +289,7 @@ export const Home = () => {
               Develop an improved personal website, focusing on scalability and
               backend integration. Strengthen proficiency in TypeScript to
               improve code readability, maintainability, and scalability.
-              Implement a blog management system with PostgreSQL and Express.js
+              Implement a blog management system with PostgreSQL and Express
               to enable dynamic content publishing. Plan deployment architecture
               via Netlify, Render, and Cloudflare DNS to minimize cost, ensure
               security, and support scalability.
